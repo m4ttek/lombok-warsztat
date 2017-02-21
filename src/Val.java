@@ -23,8 +23,8 @@ class VeryLongWorkerTypeNameWorker extends Worker implements Cloneable {
     @Override
     public VeryLongWorkerTypeNameWorker clone() {
         VeryLongWorkerTypeNameWorker veryLongWorkerTypeNameWorker = new VeryLongWorkerTypeNameWorker();
-        veryLongWorkerTypeNameWorker.setName(veryLongWorkerTypeNameWorker.getName());
-        veryLongWorkerTypeNameWorker.setOccupation(veryLongWorkerTypeNameWorker.getOccupation());
+        veryLongWorkerTypeNameWorker.setName(this.getName());
+        veryLongWorkerTypeNameWorker.setOccupation(this.getOccupation());
         return veryLongWorkerTypeNameWorker;
     }
 }

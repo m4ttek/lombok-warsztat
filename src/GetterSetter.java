@@ -1,3 +1,4 @@
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,12 +24,12 @@ public class GetterSetter {
 class Worker {
     // non null
     protected String name;
-    private Occupation occupation;
+    protected Occupation occupation;
     // deprecated
     // "Sup dawg, we heard you like annotations, so we put annotations in your annotations so you can annotate while you're annotating."
-    private String position;
+    protected String position;
     // no access!
-    private String salary;
+    protected String salary;
 }
 
 enum Occupation {
