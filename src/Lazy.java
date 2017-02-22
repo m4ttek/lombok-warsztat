@@ -1,3 +1,5 @@
+import lombok.Getter;
+
 /**
  * @author Mateusz Kamiński
  */
@@ -16,6 +18,7 @@ public class Lazy {
 
 class WorkingWorker extends Worker {
 
+    @Getter(lazy = true)
     private final double[] completedWork = work();
 
     private double[] work() {

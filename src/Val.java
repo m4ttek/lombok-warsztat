@@ -1,3 +1,6 @@
+import lombok.experimental.var;
+import lombok.val;
+
 /**
  * JEP 286: Local-Variable Type Inference
  *
@@ -6,12 +9,12 @@
 public class Val {
 
     public static void main(String... args) {
-        VeryLongWorkerTypeNameWorker borsuk = new VeryLongWorkerTypeNameWorker();
+        val borsuk = new VeryLongWorkerTypeNameWorker();
         borsuk.setName(null);
         borsuk.setPosition("Programmer");
         borsuk.setOccupation(Occupation.PROGRAMMER);
 
-        VeryLongWorkerTypeNameWorker borsuk2 = borsuk.clone();
+        val borsuk2 = borsuk.clone();
         String card = String.join(" - ", borsuk2.getName(), borsuk2.getPosition());
         System.out.println(card);
     }

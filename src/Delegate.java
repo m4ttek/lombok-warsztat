@@ -1,3 +1,5 @@
+import lombok.NonNull;
+
 /**
  * @author Mateusz Kamiński
  */
@@ -9,14 +11,16 @@ public class Delegate {
 
         Borsuk borsuk = new Borsuk(finalWorker);
         System.out.println(finalWorker.getName());
-        //System.out.println(borsuk.getName());
+        System.out.println(borsuk.getName());
     }
 
 }
 
 class Borsuk {
 
+    @lombok.experimental.Delegate
     private FinalWorker finalWorker;
+
 
     public Borsuk(FinalWorker finalWorker) {
         this.finalWorker = finalWorker;

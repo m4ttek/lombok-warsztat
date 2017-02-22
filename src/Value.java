@@ -1,5 +1,11 @@
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
+import lombok.experimental.NonFinal;
 
 /**
  * @author Mateusz Kamiński
@@ -7,8 +13,7 @@ import lombok.Setter;
 public class Value {
 
     public static void main(String... args) {
-        BorsukWorker borsukWorker = new BorsukWorker();
-        borsukWorker.setName("Badger");
+        BorsukWorker borsukWorker = new BorsukWorker("Borsuk", "Programmer");
         borsukWorker.setPosition("Programmer");
 
         // 1.
@@ -22,20 +27,12 @@ public class Value {
     }
 }
 
-@Setter
-@Getter
+@lombok.Value
 class BorsukWorker {
     private String name;
     // zmienne?
+    @NonFinal
+    @Setter
     private String position;
-
-    public BorsukWorker() {
-
-    }
-
-    public BorsukWorker(String name, String position) {
-        this.name = name;
-        this.position = position;
-    }
 
 }
